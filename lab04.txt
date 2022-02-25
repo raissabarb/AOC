@@ -1,0 +1,19 @@
+.data
+
+    pontilhado: .asciiz "-----------------------------------------"
+    #menuP: .asciiz "Bem-vindo a Loja de Computadores UNIFESP!\n\nEscolha a categoria:\n0 - Finalizar compra\n1 - Processador\n2 - Memoria interna\n3 - Memoria externa\n4 - Perifericos\n\nDigite a opcao desejada:"
+    
+.text
+
+    .globl main
+    main:
+    
+    li $a0, pontilhado
+    la $v0, 4
+    syscall
+    
+    # Finalizando o programa
+    
+    li $v0, 10
+    syscall 
+    
